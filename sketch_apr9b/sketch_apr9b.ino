@@ -8,14 +8,14 @@ volatile bool isLedOn = false;  // Track LED state (must be volatile for ISR)
 void onButtonPress() {
   isLedOn = !isLedOn;
   digitalWrite(LED_OUTPUT_PIN, isLedOn);
-  Serial.println("Button interruption triggered");
+  Serial.println("Button interruption");
 }
 
 // Interrupt Service Routine for motion detection
 void onMotionDetected() {
   isLedOn = !isLedOn;
   digitalWrite(LED_OUTPUT_PIN, isLedOn);
-  Serial.println("Motion interruption triggered");
+  Serial.println("Motion interruption");
 }
 
 void setup() {
